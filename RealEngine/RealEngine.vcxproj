@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a1ef438a-42fc-4ca0-a660-450040b19093}</ProjectGuid>
+    <RootNamespace>RealEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RealEngine\libs\GLFW\include;$(SolutionDir)RealEngine\libs\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)RealEngine\libs\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;shell32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RealEngine\libs\GLFW\include;$(SolutionDir)RealEngine\libs\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)RealEngine\libs\GLFW\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;shell32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libs\glad\src\glad.c" />
+    <ClCompile Include="src\Application.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libs\glad\include\glad\glad.h" />
+    <ClInclude Include="libs\glad\include\KHR\khrplatform.h" />
+    <ClInclude Include="libs\GLFW\include\GLFW\glfw3.h" />
+    <ClInclude Include="libs\GLFW\include\GLFW\glfw3native.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Log\Log.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libs\GLFW\docs\html\build_8md.html" />
+    <None Include="libs\GLFW\docs\html\build_guide.html" />
+    <None Include="libs\GLFW\docs\html\compat_8md.html" />
+    <None Include="libs\GLFW\docs\html\compat_guide.html" />
+    <None Include="libs\GLFW\docs\html\compile_8md.html" />
+    <None Include="libs\GLFW\docs\html\compile_guide.html" />
+    <None Include="libs\GLFW\docs\html\context_8md.html" />
+    <None Include="libs\GLFW\docs\html\context_guide.html" />
+    <None Include="libs\GLFW\docs\html\deprecated.html" />
+    <None Include="libs\GLFW\docs\html\dir_13577e2d8b9423099662de029791bd7d.html" />
+    <None Include="libs\GLFW\docs\html\dir_7f92719a7fe62e5b064f87d7a3c220b1.html" />
+    <None Include="libs\GLFW\docs\html\dir_a788ef6c2b1e5b367804e0b6ccfd6f11.html" />
+    <None Include="libs\GLFW\docs\html\dir_b11153cd0f4fd04a7564cc166f482635.html" />
+    <None Include="libs\GLFW\docs\html\files.html" />
+    <None Include="libs\GLFW\docs\html\glfw3native_8h.html" />
+    <None Include="libs\GLFW\docs\html\glfw3native_8h_source.html" />
+    <None Include="libs\GLFW\docs\html\glfw3_8h.html" />
+    <None Include="libs\GLFW\docs\html\glfw3_8h_source.html" />
+    <None Include="libs\GLFW\docs\html\group__buttons.html" />
+    <None Include="libs\GLFW\docs\html\group__context.html" />
+    <None Include="libs\GLFW\docs\html\group__errors.html" />
+    <None Include="libs\GLFW\docs\html\group__gamepad__axes.html" />
+    <None Include="libs\GLFW\docs\html\group__gamepad__buttons.html" />
+    <None Include="libs\GLFW\docs\html\group__hat__state.html" />
+    <None Include="libs\GLFW\docs\html\group__init.html" />
+    <None Include="libs\GLFW\docs\html\group__input.html" />
+    <None Include="libs\GLFW\docs\html\group__joysticks.html" />
+    <None Include="libs\GLFW\docs\html\group__keys.html" />
+    <None Include="libs\GLFW\docs\html\group__mods.html" />
+    <None Include="libs\GLFW\docs\html\group__monitor.html" />
+    <None Include="libs\GLFW\docs\html\group__native.html" />
+    <None Include="libs\GLFW\docs\html\group__shapes.html" />
+    <None Include="libs\GLFW\docs\html\group__vulkan.html" />
+    <None Include="libs\GLFW\docs\html\group__window.html" />
+    <None Include="libs\GLFW\docs\html\index.html" />
+    <None Include="libs\GLFW\docs\html\input_8md.html" />
+    <None Include="libs\GLFW\docs\html\input_guide.html" />
+    <None Include="libs\GLFW\docs\html\internals_guide.html" />
+    <None Include="libs\GLFW\docs\html\internal_8md.html" />
+    <None Include="libs\GLFW\docs\html\intro_8md.html" />
+    <None Include="libs\GLFW\docs\html\intro_guide.html" />
+    <None Include="libs\GLFW\docs\html\main_8md.html" />
+    <None Include="libs\GLFW\docs\html\monitor_8md.html" />
+    <None Include="libs\GLFW\docs\html\monitor_guide.html" />
+    <None Include="libs\GLFW\docs\html\moving_8md.html" />
+    <None Include="libs\GLFW\docs\html\moving_guide.html" />
+    <None Include="libs\GLFW\docs\html\news.html" />
+    <None Include="libs\GLFW\docs\html\news_8md.html" />
+    <None Include="libs\GLFW\docs\html\pages.html" />
+    <None Include="libs\GLFW\docs\html\quick_8md.html" />
+    <None Include="libs\GLFW\docs\html\quick_guide.html" />
+    <None Include="libs\GLFW\docs\html\struct_g_l_f_wallocator.html" />
+    <None Include="libs\GLFW\docs\html\struct_g_l_f_wgamepadstate.html" />
+    <None Include="libs\GLFW\docs\html\struct_g_l_f_wgammaramp.html" />
+    <None Include="libs\GLFW\docs\html\struct_g_l_f_wimage.html" />
+    <None Include="libs\GLFW\docs\html\struct_g_l_f_wvidmode.html" />
+    <None Include="libs\GLFW\docs\html\topics.html" />
+    <None Include="libs\GLFW\docs\html\vulkan_8md.html" />
+    <None Include="libs\GLFW\docs\html\vulkan_guide.html" />
+    <None Include="libs\GLFW\docs\html\window_8md.html" />
+    <None Include="libs\GLFW\docs\html\window_guide.html" />
+    <None Include="libs\GLFW\LICENSE.md" />
+    <None Include="libs\GLFW\README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
