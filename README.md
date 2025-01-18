@@ -15,3 +15,7 @@ Select Release and go to Compile and select Compile Solution
 then if it open's then it work's but if not then click F5
 
 The You should have it all setup and working! Happy Using!!
+
+# Want to help or Ask for more features?
+
+Want to help or Ask for more features? Well you can the link is to a docs page
