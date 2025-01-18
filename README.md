@@ -19,3 +19,5 @@ The You should have it all setup and working! Happy Using!!
 # Want to help or Ask for more features?
 
 Want to help or Ask for more features? Well you can the link is to a docs page
+
+https://docs.google.com/document/d/1rmpRiQicgcuoiF9O_fx6sSLXfHZ17PXr2ICgP6Rzu7s/edit?usp=sharing
