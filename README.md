@@ -16,10 +16,6 @@ then if it open's then it work's but if not then click F5
 
 The You should have it all setup and working! Happy Using!!
 
-# Want to help or Ask for more features?
+# Want to help?
 
-Want to help or Ask for more features? Well you can the link is to a docs page and a link to a millanote page
-
-https://docs.google.com/document/d/1rmpRiQicgcuoiF9O_fx6sSLXfHZ17PXr2ICgP6Rzu7s/edit?usp=sharing
-
-https://app.milanote.com/1TxZ6O1I0nQ28O?p=x3PkwZC2aNp
+Want to help? Then join the discusstion board
