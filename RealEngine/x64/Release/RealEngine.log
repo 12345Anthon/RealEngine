@@ -1,0 +1,2 @@
+﻿  glad.c
+C:\Users\dylew\Desktop\RealEngine\RealEngine\libs\glad\src\glad.c(22,10): error C1853: Prekompilowany plik nagłówkowy „x64\Release\RealEngine.pch” pochodzi z innej wersji kompilatora lub prekompilowany plik nagłówkowy jest w języku C++ i zastosowano go w języku C (albo odwrotnie)
